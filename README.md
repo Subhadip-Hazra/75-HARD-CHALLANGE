@@ -66,7 +66,7 @@ Contributions are welcome! If you have a better solution or find any bugs, feel 
 
 1. **Fork the Repository**
 
-   ![Fork](https://img.shields.io/github/forks/yourusername/leetcode-75-challenge?style=social)
+   ![Fork](https://img.shields.io/github/forks/Subhadip-Hazra/75-HARD-CHALLANGE.git?style=social)
 
 2. **Create a new branch**
 
@@ -83,12 +83,12 @@ Contributions are welcome! If you have a better solution or find any bugs, feel 
 4. **Push to the branch**
 
    ```bash
-   git push origin feature/your-feature-name
+   git push origin feature/75-HARD-CHALLANGE.git
    ```
 
 5. **Create a Pull Request**
 
-   ![Pull Request](https://img.shields.io/github/issues-pr/yourusername/leetcode-75-challenge?style=social)
+   ![Pull Request](https://img.shields.io/github/forks/Subhadip-Hazra/75-HARD-CHALLANGE.git?style=social)
 
 
 ---
