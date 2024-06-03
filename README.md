@@ -15,7 +15,7 @@ Welcome to my repository of solutions for the **LeetCode 75 Challenge**! This re
 
 ## 📘 Introduction
 
-The **LeetCode 75 Challenge** is a curated list of problems designed to help developers build strong problem-solving skills and prepare for technical interviews. This repository contains my Java solutions to each of the problems, complete with explanations and comments to help you understand the thought process behind each solution.
+The **LeetCode 75 Challenge** is a curated list of problems designed to help developers build strong problem-solving skills and prepare for technical interviews. This repository contains my Java and Javascript solutions to each of the problems, complete with explanations and comments to help you understand the thought process behind each solution.
 
 ## 🚀 About the Challenge
 
