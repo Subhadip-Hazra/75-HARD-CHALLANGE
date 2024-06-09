@@ -1,0 +1,127 @@
+# Move Zeroes
+
+## Problem Statement
+
+Given an integer array `nums`, move all `0`s to the end of the array while maintaining the relative order of the non-zero elements.
+
+Note that you must do this **in-place** without making a copy of the array.
+
+### Examples
+
+#### Example 1
+
+- **Input:** `nums = [0, 1, 0, 3, 12]`
+- **Output:** `[1, 3, 12, 0, 0]`
+
+#### Example 2
+
+- **Input:** `nums = [0]`
+- **Output:** `[0]`
+
+### Constraints
+
+- `1 <= nums.length <= 10^4`
+- `-2^31 <= nums[i] <= 2^31 - 1`
+
+## Solution
+
+### Java Solution
+
+The Java solution involves iterating through the array and moving all non-zero elements to the front. After all non-zero elements are placed in their correct positions, the remaining positions are filled with zeros.
+
+```java
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int k = 0;
+        // Move all non-zero elements to the front
+        for(int num : nums){
+            if(num != 0) {
+                nums[k++] = num;
+            }
+        }
+        // Fill the remaining positions with zeros
+        for(int i = k; i < nums.length; i++){
+            nums[i] = 0;
+        }
+    }
+}
+```
+
+### JavaScript Solution
+
+The JavaScript solution follows the same approach as the Java solution. It iterates through the array, moving non-zero elements to the front and filling the remaining positions with zeros.
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function(nums) {
+    let k = 0;
+    // Move all non-zero elements to the front
+    for(let num of nums) {
+        if(num != 0) {
+            nums[k++] = num;
+        }
+    }
+    // Fill the remaining positions with zeros
+    for(let i = k; i < nums.length; i++) {
+        nums[i] = 0;
+    }
+};
+```
+
+## Approach
+
+### Intuition
+
+To move all zeroes to the end while maintaining the relative order of non-zero elements, we can use a two-pointer approach:
+1. Use one pointer to keep track of the position where the next non-zero element should be placed.
+2. Iterate through the array, and whenever a non-zero element is found, place it at the current position of the first pointer and increment the pointer.
+3. After placing all non-zero elements, fill the remaining positions with zeros.
+
+### Steps
+
+1. **Initialize Pointer:**
+   - Initialize a pointer `k` to 0, which will keep track of the position where the next non-zero element should be placed.
+
+2. **Move Non-Zero Elements:**
+   - Iterate through the array. For each non-zero element, place it at the position pointed to by `k` and increment `k`.
+
+3. **Fill Remaining Positions with Zeros:**
+   - After moving all non-zero elements, fill the remaining positions in the array with zeros.
+
+### Time Complexity
+
+- The time complexity of the solution is \(O(n)\) because we traverse the array twice: once to move non-zero elements and once to fill the remaining positions with zeros.
+
+### Space Complexity
+
+- The space complexity is \(O(1)\) extra space as the algorithm modifies the array in-place and does not use any additional data structures.
+
+## Example and Dry Run
+
+Let's go through a dry run of the JavaScript solution with Example 1:
+
+**Input:** `nums = [0, 1, 0, 3, 12]`
+**Output:** `[1, 3, 12, 0, 0]`
+
+### Steps
+
+1. **Initialization:**
+   - `k = 0`
+
+2. **Move Non-Zero Elements:**
+   - For `num = 0`: `k = 0`
+   - For `num = 1`: `nums[0] = 1`, `k = 1`
+   - For `num = 0`: `k = 1`
+   - For `num = 3`: `nums[1] = 3`, `k = 2`
+   - For `num = 12`: `nums[2] = 12`, `k = 3`
+
+3. **Fill Remaining Positions with Zeros:**
+   - For `i = 3`: `nums[3] = 0`
+   - For `i = 4`: `nums[4] = 0`
+
+**Modified Array:** `[1, 3, 12, 0, 0]`
+
+This demonstrates that the function works correctly for the given example.
