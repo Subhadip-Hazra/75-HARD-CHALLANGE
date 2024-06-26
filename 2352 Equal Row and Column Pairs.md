@@ -171,35 +171,6 @@ Let's go through a dry run of both the Java and JavaScript solutions with Exampl
 **Result:**
 - Return `res = 1`
 
-### JavaScript Dry Run
-
-**Initialization:**
-- `n = 3`
-- `res = 0`
-- `flip = [[undefined,undefined,undefined], [undefined,undefined,undefined], [undefined,undefined,undefined]]`
-
-**Transpose:**
-- `flip = [[3,1,2], [2,7,7], [1,6,7]]`
-
-**Comparison:**
-1. Compare `grid[0] = [3,2,1]` with:
-   - `flip[0] = [3,1,2]` → Not equal
-   - `flip[1] = [2,7,7]` → Not equal
-   - `flip[2] = [1,6,7]` → Not equal
-
-2. Compare `grid[1] = [1,7,6]` with:
-   - `flip[0] = [3,1,2]` → Not equal
-   - `flip[1] = [2,7,7]` → Not equal
-   - `flip[2] = [1,6,7]` → Not equal
-
-3. Compare `grid[2] = [2,7,7]` with:
-   - `flip[0] = [3,1,2]` → Not equal
-   - `flip[1] = [2,7,7]` → Equal → `res = 1`
-   - `flip[2] = [1,6,7]` → Not equal
-
-**Result:**
-- Return `res = 1`
-
 ## Conclusion
 
 The provided solutions efficiently determine the number of equal row and column pairs in a grid by transposing the grid and comparing rows and columns. Both the Java and JavaScript implementations handle the matrix transposition and comparison steps optimally within the constraints.
